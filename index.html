@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo">
+        <img src="logo.png" alt="Logo" />
+      </div>
+      <ul>
+        <li><a href="#">Dashboard</a></li>
+        <li><a href="#">Purchase History</a></li>
+        <li><a href="#">My Products</a></li>
+        <li><a href="#">My Profile</a></li>
+        <li><a href="#">My Cart</a></li>
+        <li><a href="#">Wishlist</a></li>
+        <li><a href="#">Change Password</a></li>
+        <li><a href="#">Logout</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content">
+      <!-- Header -->
+      <header class="header">
+        <div class="nav">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Content</a></li>
+          </ul>
+          <div class="user-icon">
+            <i class="fas fa-user"></i>
+          </div>
+        </div>
+      </header>
+
+      <!-- Dashboard -->
+      <section class="dashboard">
+        <div class="dashboard-header">
+          <img src="house.jpg" alt="House Image" class="banner-img" />
+        </div>
+        <div class="dashboard-stats">
+          <div class="card">
+            <i class="fas fa-user"></i>
+            <h3>My Profile</h3>
+          </div>
+          <div class="card">
+            <i class="fas fa-box"></i>
+            <h3>My Products</h3>
+          </div>
+          <div class="card">
+            <i class="fas fa-bell"></i>
+            <h3>Notifications</h3>
+          </div>
+        </div>
+
+        <!-- Analytics Section -->
+        <section class="analytics">
+          <div class="payment-analytics">
+            <h3>Payment Analytics</h3>
+            <div class="chart">
+              <!-- Placeholder for a chart image -->
+              <img src="chart-placeholder.png" alt="Payment Chart" />
+            </div>
+          </div>
+          <div class="payment-report">
+            <h3>Payment Report</h3>
+            <table>
+              <tr>
+                <th>File Code</th>
+                <th>Installment Due Date</th>
+                <th>Installment Amount</th>
+                <th>Paid Date</th>
+                <th>Paid Amount</th>
+                <th>Status</th>
+              </tr>
+              <tr>
+                <td>WR-RUND-5M-0002</td>
+                <td>2024-1-10</td>
+                <td>Rs. 17,500</td>
+                <td>2024-1-18</td>
+                <td>Rs. 17,000</td>
+                <td><span class="status-paid">Paid</span></td>
+              </tr>
+              <!-- Add more rows as needed -->
+            </table>
+          </div>
+        </section>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <p>Copyright © 2024 All Rights Reserved @ Earthcon</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
