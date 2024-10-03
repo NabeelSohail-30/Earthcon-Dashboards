@@ -144,7 +144,7 @@
                 <table>
                   <thead>
                     <tr>
-                      <th>File Code</th>
+                      <th class="file">File Code</th>
                       <th>Installment Due Date</th>
                       <th>Installment Amount</th>
                       <th>Paid Date</th>
@@ -223,8 +223,8 @@
                 <div class="chart-container">
                   <canvas
                     id="paymentChart"
-                    width="140px"
-                    height="140px"
+                    width="150px"
+                    height="150px"
                   ></canvas>
                   <div class="legend">
                     <div>
@@ -247,6 +247,15 @@
                   </div>
                 </div>
               </div>
+              <div class="target-container">
+                <div class="chart-head">
+                  <h2>Payment Target Actual Vs Paid</h2>
+                  <button class="dropbtn">October, 2023</button>
+                </div>
+                <div class="chart-container">
+                  <canvas id="barChart" width="200px" height="200px"></canvas>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -256,9 +265,11 @@
       <footer class="footer">
         <p>Copyright © 2024 All Rights Reserved @ Earthcon</p>
         <div class="social-icons">
-          <a href="#"><i class="fab fa-facebook"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><img src="./assets/images/twitter.png" alt="" /></a>
+          <a href="#"><img src="./assets/images/fb.png" alt="" /></a>
+          <a href="#"><img src="./assets/images/yt.png" alt="" /></a>
+          <a href="#"><img src="./assets/images/linkedin.png" alt="" /></a>
+          <a href="#"><img src="./assets/images/ig.png" alt="" /></a>
         </div>
         <p>Privacy Policy | Terms & Condition</p>
       </footer>
@@ -266,8 +277,11 @@
   </body>
 
   <script>
-    const ctx = document.getElementById("paymentChart").getContext("2d");
-    const paymentChart = new Chart(ctx, {
+    // Doughnut Chart for Payment Analytics
+    const doughnutCtx = document
+      .getElementById("paymentChart")
+      .getContext("2d");
+    const doughnutChart = new Chart(doughnutCtx, {
       type: "doughnut",
       data: {
         labels: [
@@ -288,7 +302,7 @@
       options: {
         cutout: "70%",
         responsive: false,
-        maintainAspectRatio: false, // Allow chart to be resized
+        maintainAspectRatio: false,
         plugins: {
           legend: {
             display: false,
@@ -298,6 +312,88 @@
               label: function (tooltipItem) {
                 const value = tooltipItem.raw;
                 return ` ${value}%`;
+              },
+            },
+          },
+        },
+      },
+    });
+
+    // Bar Chart for Payment Target Actual Vs Paid
+    const barCtx = document.getElementById("barChart").getContext("2d");
+    const barChart = new Chart(barCtx, {
+      type: "bar",
+      data: {
+        labels: [
+          "Jan",
+          "Feb",
+          "Mar",
+          "Apr",
+          "May",
+          "Jun",
+          "Jul",
+          "Aug",
+          "Sept",
+          "Oct",
+          "Nov",
+          "Dec",
+        ],
+        datasets: [
+          {
+            label: "Paid",
+            data: [
+              300000, 150000, 200000, 175000, 400000, 450000, 500000, 250000,
+              300000, 270000, 550000, 350000,
+            ],
+            backgroundColor: "#f89b2d",
+          },
+          {
+            label: "Actual",
+            data: [
+              500000, 400000, 450000, 300000, 600000, 700000, 750000, 500000,
+              550000, 500000, 750000, 600000,
+            ],
+            backgroundColor: "#fbdba1",
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          y: {
+            beginAtZero: true,
+            max: 1000000,
+            ticks: {
+              callback: function (value) {
+                return value.toLocaleString();
+              },
+            },
+            grid: {
+              display: false, // Disable gridlines
+            },
+            stacked: true, // Enable stacked bars
+          },
+          x: {
+            ticks: {
+              maxRotation: 0,
+              minRotation: 0,
+            },
+            grid: {
+              display: false, // Disable gridlines
+            },
+            stacked: true, // Enable stacked bars
+          },
+        },
+        plugins: {
+          legend: {
+            position: "top",
+          },
+          tooltip: {
+            callbacks: {
+              label: function (context) {
+                let value = context.parsed.y;
+                return value.toLocaleString();
               },
             },
           },
