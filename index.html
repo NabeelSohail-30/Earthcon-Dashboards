@@ -5,98 +5,252 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard</title>
     <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
   <body>
-    <!-- Sidebar -->
-    <aside class="sidebar">
-      <div class="logo">
-        <img src="logo.png" alt="Logo" />
-      </div>
-      <ul>
-        <li><a href="#">Dashboard</a></li>
-        <li><a href="#">Purchase History</a></li>
-        <li><a href="#">My Products</a></li>
-        <li><a href="#">My Profile</a></li>
-        <li><a href="#">My Cart</a></li>
-        <li><a href="#">Wishlist</a></li>
-        <li><a href="#">Change Password</a></li>
-        <li><a href="#">Logout</a></li>
-      </ul>
-    </aside>
-
     <!-- Main Content -->
     <main class="content">
       <!-- Header -->
       <header class="header">
-        <div class="nav">
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Content</a></li>
-          </ul>
-          <div class="user-icon">
-            <i class="fas fa-user"></i>
-          </div>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Content</a></li>
+        </ul>
+        <div class="user-icon">
+          <img src="./assets/images/profie-head-icon.png" alt="" />
         </div>
       </header>
 
-      <!-- Dashboard -->
-      <section class="dashboard">
-        <div class="dashboard-header">
-          <img src="house.jpg" alt="House Image" class="banner-img" />
-        </div>
-        <div class="dashboard-stats">
-          <div class="card">
-            <i class="fas fa-user"></i>
-            <h3>My Profile</h3>
-          </div>
-          <div class="card">
-            <i class="fas fa-box"></i>
-            <h3>My Products</h3>
-          </div>
-          <div class="card">
-            <i class="fas fa-bell"></i>
-            <h3>Notifications</h3>
-          </div>
-        </div>
+      <div class="main-content">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+          <ul>
+            <li>
+              <a href="#"
+                ><img
+                  src="./assets/images/dashboard-icon.png"
+                  alt=""
+                  class="nav-img"
+                />
+                <div class="nav-text">Dashboard</div></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="./assets/images/purchase-icon.png"
+                  alt=""
+                  class="nav-img"
+                />
+                <div class="nav-text">Purchase History</div></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="./assets/images/product-icon.png"
+                  alt=""
+                  class="nav-img"
+                />
+                <div class="nav-text">My Products</div></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="./assets/images/profile-icon.png"
+                  alt=""
+                  class="nav-img"
+                />
+                <div class="nav-text">My Profile</div></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="./assets/images/cart-icon.png"
+                  alt=""
+                  class="nav-img"
+                />
+                <div class="nav-text">Cart</div></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="./assets/images/wish-icon.png"
+                  alt=""
+                  class="nav-img"
+                />
+                <div class="nav-text">Wishlist</div></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="./assets/images/pass-icon.png"
+                  alt=""
+                  class="nav-img"
+                />
+                <div class="nav-text">Change Password</div></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="./assets/images/logout-icon.png"
+                  alt=""
+                  class="nav-img"
+                />
+                <div class="nav-text">Logout</div></a
+              >
+            </li>
+          </ul>
+        </aside>
 
-        <!-- Analytics Section -->
-        <section class="analytics">
-          <div class="payment-analytics">
-            <h3>Payment Analytics</h3>
-            <div class="chart">
-              <!-- Placeholder for a chart image -->
-              <img src="chart-placeholder.png" alt="Payment Chart" />
+        <!-- Dashboard -->
+        <section class="dashboard">
+          <div class="dashboard-header">
+            <img
+              src="./assets/images/banner.png"
+              alt="House Image"
+              class="banner-img"
+            />
+          </div>
+
+          <div class="dash-bottom">
+            <div class="dash-left">
+              <div class="dashboard-stats">
+                <div class="card">
+                  <img src="./assets/images/profile-card.png" alt="" />
+                  <h3>My Profile</h3>
+                </div>
+                <div class="card">
+                  <img src="./assets/images/property-card.png" alt="" />
+                  <h3>My Products</h3>
+                </div>
+                <div class="card">
+                  <img src="./assets/images/notifi-card.png" alt="" />
+                  <h3>Notifications</h3>
+                </div>
+              </div>
+
+              <div class="payment-report">
+                <div class="content-head">
+                  <h2>Payment Report</h2>
+                  <button class="view-button">View</button>
+                </div>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>File Code</th>
+                      <th>Installment Due Date</th>
+                      <th>Installment Amount</th>
+                      <th>Paid Date</th>
+                      <th>Paid Amount</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>WR-RUND-5M-0002</td>
+                      <td>2024-1-10</td>
+                      <td>Rs. 17,500</td>
+                      <td>2024-1-18</td>
+                      <td>Rs. 17,000</td>
+                      <td class="status">
+                        <span class="paid">Paid</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>WR-RUND-5M-0002</td>
+                      <td>2024-2-10</td>
+                      <td>Rs. 17,500</td>
+                      <td>2024-2-01</td>
+                      <td>Rs. 17,500</td>
+                      <td class="status">
+                        <span class="rejected">Rejected</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>WR-RUND-5M-0002</td>
+                      <td>2024-3-10</td>
+                      <td>Rs. 17,500</td>
+                      <td>2024-3-14</td>
+                      <td>Rs. 18,000</td>
+                      <td class="status">
+                        <span class="paid">Paid</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>WR-RUND-5M-0006</td>
+                      <td>2024-1-10</td>
+                      <td>Rs. 17,500</td>
+                      <td>2024-3-16</td>
+                      <td>Rs. 17,500</td>
+                      <td class="status">
+                        <span class="paid">Paid</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>WR-RUND-5M-0006</td>
+                      <td>2024-2-10</td>
+                      <td>Rs. 17,500</td>
+                      <td>2024-3-11</td>
+                      <td>Rs. 17,500</td>
+                      <td class="status">
+                        <span class="pending">Pending</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>WR-RUND-5M-0006</td>
+                      <td>2024-3-10</td>
+                      <td>Rs. 17,500</td>
+                      <td>2024-3-05</td>
+                      <td>Rs. 17,500</td>
+                      <td class="status">
+                        <span class="paid">Paid</span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="dash-right">
+              <div class="analytics-container">
+                <h2>Payment Analytics</h2>
+                <div class="chart-container">
+                  <canvas
+                    id="paymentChart"
+                    width="140px"
+                    height="140px"
+                  ></canvas>
+                  <div class="legend">
+                    <div>
+                      <span class="legend-dot blue"></span> 100% Total Amount
+                      <span class="amount">Rs. 1,800,000</span>
+                    </div>
+                    <div>
+                      <span class="legend-dot green"></span> 60% Total Paid
+                      Amount
+                      <span class="amount">Rs. 491,250</span>
+                    </div>
+                    <div>
+                      <span class="legend-dot orange"></span> 20% Pending
+                      Approvals <span class="amount">Rs. 360,000</span>
+                    </div>
+                    <div>
+                      <span class="legend-dot red"></span> 20% Total Remaining
+                      <span class="amount">Rs. 1,308,750</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="payment-report">
-            <h3>Payment Report</h3>
-            <table>
-              <tr>
-                <th>File Code</th>
-                <th>Installment Due Date</th>
-                <th>Installment Amount</th>
-                <th>Paid Date</th>
-                <th>Paid Amount</th>
-                <th>Status</th>
-              </tr>
-              <tr>
-                <td>WR-RUND-5M-0002</td>
-                <td>2024-1-10</td>
-                <td>Rs. 17,500</td>
-                <td>2024-1-18</td>
-                <td>Rs. 17,000</td>
-                <td><span class="status-paid">Paid</span></td>
-              </tr>
-              <!-- Add more rows as needed -->
-            </table>
-          </div>
         </section>
-      </section>
+      </div>
 
       <!-- Footer -->
       <footer class="footer">
@@ -106,7 +260,49 @@
           <a href="#"><i class="fab fa-instagram"></i></a>
           <a href="#"><i class="fab fa-youtube"></i></a>
         </div>
+        <p>Privacy Policy | Terms & Condition</p>
       </footer>
     </main>
   </body>
+
+  <script>
+    const ctx = document.getElementById("paymentChart").getContext("2d");
+    const paymentChart = new Chart(ctx, {
+      type: "doughnut",
+      data: {
+        labels: [
+          "Total Amount",
+          "Total Paid Amount",
+          "Pending Approvals",
+          "Total Remaining",
+        ],
+        datasets: [
+          {
+            data: [100, 60, 20, 20],
+            backgroundColor: ["#007bff", "#28a745", "#ffc107", "#dc3545"],
+            hoverBackgroundColor: ["#0056b3", "#218838", "#e0a800", "#c82333"],
+            borderWidth: 0,
+          },
+        ],
+      },
+      options: {
+        cutout: "70%",
+        responsive: false,
+        maintainAspectRatio: false, // Allow chart to be resized
+        plugins: {
+          legend: {
+            display: false,
+          },
+          tooltip: {
+            callbacks: {
+              label: function (tooltipItem) {
+                const value = tooltipItem.raw;
+                return ` ${value}%`;
+              },
+            },
+          },
+        },
+      },
+    });
+  </script>
 </html>
