@@ -343,6 +343,17 @@ h2 {
   justify-content: space-between;
   align-items: center;
   padding: 20px 10px;
+  width: 100%;
+}
+
+.analytics-container canvas {
+  height: 150px !important;
+  width: 150px !important;
+}
+
+.target-container canvas {
+  width: 100% !important;
+  height: 100% !important;
 }
 
 .legend div {
@@ -482,4 +493,105 @@ h2 {
   gap: 30px;
   align-items: center;
   justify-content: flex-end;
+}
+
+@media (min-width: 1600px) {
+  .analytics-container canvas {
+    height: 176px !important;
+    width: 176px !important;
+  }
+
+  .target-container h2 {
+    width: auto;
+  }
+
+  .legend div {
+    font-size: 14px;
+  }
+
+  tbody td {
+    font-size: 14px;
+  }
+
+  thead th {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+@media (min-width: 1800px) {
+  .analytics-container canvas {
+    height: 200px !important;
+    width: 200px !important;
+  }
+
+  .chart-container {
+    padding: 20px 30px;
+  }
+
+  .payment-report {
+    width: 95%;
+  }
+
+  tbody td {
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  thead th {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .paid,
+  .pending,
+  .rejected {
+    font-size: 18px;
+    padding: 14px 0px;
+    width: 110px;
+  }
+
+  .view-button {
+    font-size: 18px;
+    padding: 14px 0px;
+    width: 110px;
+  }
+
+  .content-head h2,
+  h2 {
+    font-size: 24px;
+    line-height: 26px;
+    font-weight: 700;
+  }
+
+  .dashboard-stats .card {
+    width: 250px;
+    height: 200px;
+    gap: 20px;
+  }
+
+  .dashboard-stats .card h3 {
+    font-size: 24px;
+  }
+
+  .analytics-container,
+  .target-container {
+    height: 300px;
+  }
+
+  .target-container h2 {
+    width: auto;
+  }
+
+  .dropbtn {
+    font-size: 18px;
+  }
+
+  .dropdown-content a {
+    font-size: 18px;
+  }
+
+  .legend div {
+    font-size: 18px;
+  }
 }
