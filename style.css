@@ -3,50 +3,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 /* Main Content */
 .content {
   width: 100%;
-}
-
-/* Sidebar */
-.sidebar {
-  width: 250px;
-  height: 100vh;
-  left: 0;
-  top: 0;
-  color: #fff;
-}
-
-.sidebar ul {
-  list-style: none;
-  padding: 20px 0;
-  margin-top: 114px;
-  width: 100%;
-}
-
-.sidebar ul li a {
-  height: 74px;
-  background: #f8f7fd;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.24);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: left;
-  gap: 12px;
-  padding-left: 20px;
-  text-decoration: none;
-  margin-bottom: 2px;
-}
-
-.sidebar .nav-text {
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 24px;
-  text-align: left;
-  color: #6a6a6a;
 }
 
 .header {
@@ -57,11 +19,9 @@
   background: #111111;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   gap: 20px;
-  padding-left: 261px;
-  padding-right: 84px;
 }
 
 .header ul {
@@ -81,7 +41,7 @@
 
 .user-icon {
   background: #d9d9d9;
-  padding: 8px 16px;
+  padding: 4px 10px;
   border-radius: 4px;
 }
 
@@ -89,9 +49,54 @@
   width: 100%;
   display: flex;
   flex-direction: row;
-  gap: 10px;
+  gap: 0px;
   justify-content: flex-start;
   align-items: flex-start;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 300px;
+  height: auto;
+  left: 0;
+  top: 0;
+  color: #fff;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0px;
+  margin-top: 0px;
+  width: 100%;
+}
+
+.sidebar ul li a {
+  height: 74px;
+  background: #f8f7fd;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  gap: 12px;
+  padding-left: 20px;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.24);
+  color: #6a6a6a;
+  transition: all 0.3s ease-in-out;
+}
+
+.sidebar ul li a:hover {
+  background: #e6e4f1;
+  color: black;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.sidebar .nav-text {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
 }
 
 .dashboard {
@@ -109,12 +114,12 @@
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
 }
 
 .dash-bottom .dash-left {
-  width: 682px;
+  width: 60%;
   padding: 10px;
   gap: 20px;
   display: flex;
@@ -124,7 +129,7 @@
 }
 
 .dash-bottom .dash-right {
-  width: 500px;
+  width: 40%;
   height: 100%;
   padding: 10px;
 }
@@ -132,9 +137,10 @@
 /* Dashboard Cards */
 .dashboard-stats {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   margin: auto;
   width: 100%;
+  gap: 20px;
 }
 
 .dashboard-stats .card {
@@ -146,6 +152,13 @@
   justify-content: center;
   align-items: center;
   gap: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+.dashboard-stats .card:hover {
+  background: #e6e4f1;
+  cursor: pointer;
+  scale: 1.1;
 }
 
 .dashboard-stats .card h3 {
@@ -243,32 +256,53 @@ tbody tr:last-child td {
 
 .paid {
   background-color: #28a745;
-  width: max-content;
+  width: 85px;
+  text-align: center;
   padding: 6px 20px;
   border-radius: 6px;
   color: white;
   font-size: 12px;
   font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
 }
 
 .rejected {
   background-color: red;
-  width: max-content;
+  width: 85px;
+  text-align: center;
   padding: 6px 20px;
   border-radius: 6px;
   color: white;
   font-size: 12px;
   font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
 }
 
 .pending {
   background-color: #ffc107;
-  width: max-content;
+  width: 85px;
+  text-align: center;
   padding: 6px 20px;
   border-radius: 6px;
   color: white;
   font-size: 12px;
   font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.paid:hover {
+  background-color: #218838;
+}
+
+.rejected:hover {
+  background-color: #dc3545;
+}
+
+.pending:hover {
+  background-color: #e0a800;
 }
 
 .view-button {
@@ -308,7 +342,7 @@ h2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 20px 10px;
 }
 
 .legend div {
@@ -316,14 +350,15 @@ h2 {
   align-items: center;
   margin-bottom: 8px;
   font-size: 12px;
+  flex-wrap: nowrap;
 }
 
 .legend-dot {
-  width: 15px;
-  height: 15px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   display: inline-block;
-  margin-right: 10px;
+  margin-right: 6px;
 }
 
 .legend-dot.blue {
@@ -340,7 +375,7 @@ h2 {
 }
 
 .amount {
-  margin-left: 10px;
+  margin-left: 6px;
   font-weight: bold;
 }
 
@@ -350,12 +385,83 @@ h2 {
   align-items: center;
 }
 
-.dropbtn {
+.target-container h2 {
+  width: 256px;
+}
+
+/* .dropbtn {
   background: #fead1d;
   border-radius: 5px;
   border: none;
   color: white;
   padding: 8px 10px;
+  transition: all 0.3s ease-in-out;
+  outline: none;
+}
+
+.dropbtn:hover {
+  background: #f0a500;
+}
+
+.dropbtn option {
+  background: #fead1d;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  padding: 8px 10px;
+  transition: all 0.3s ease-in-out;
+  outline: none;
+}
+
+.dropbtn option:hover {
+  background: #f0a500;
+} */
+
+/* Button style */
+.dropbtn {
+  background-color: #fead1d;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Dropdown container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  width: 100%;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Dropdown links */
+.dropdown-content a {
+  color: black;
+  padding: 6px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Show the dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change hover color of dropdown links */
+.dropdown-content a:hover {
+  background-color: #f0a500;
+  color: white;
 }
 
 /* Footer */

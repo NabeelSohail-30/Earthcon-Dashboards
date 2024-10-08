@@ -8,272 +8,277 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
   <body>
-    <!-- Main Content -->
-    <main class="content">
-      <!-- Header -->
-      <header class="header">
+    <header class="header">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Content</a></li>
+      </ul>
+      <div class="user-icon">
+        <img src="./assets/images/profie-head-icon.png" alt="" />
+      </div>
+    </header>
+
+    <div class="main-content">
+      <!-- Sidebar -->
+      <aside class="sidebar">
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="#">Content</a></li>
+          <li>
+            <a href="#"
+              ><img
+                src="./assets/images/dashboard-icon.png"
+                alt=""
+                class="nav-img"
+              />
+              <div class="nav-text">Dashboard</div></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="./assets/images/purchase-icon.png"
+                alt=""
+                class="nav-img"
+              />
+              <div class="nav-text">Purchase History</div></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="./assets/images/product-icon.png"
+                alt=""
+                class="nav-img"
+              />
+              <div class="nav-text">My Products</div></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="./assets/images/profile-icon.png"
+                alt=""
+                class="nav-img"
+              />
+              <div class="nav-text">My Profile</div></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="./assets/images/cart-icon.png"
+                alt=""
+                class="nav-img"
+              />
+              <div class="nav-text">Cart</div></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="./assets/images/wish-icon.png"
+                alt=""
+                class="nav-img"
+              />
+              <div class="nav-text">Wishlist</div></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="./assets/images/pass-icon.png"
+                alt=""
+                class="nav-img"
+              />
+              <div class="nav-text">Change Password</div></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="./assets/images/logout-icon.png"
+                alt=""
+                class="nav-img"
+              />
+              <div class="nav-text">Logout</div></a
+            >
+          </li>
         </ul>
-        <div class="user-icon">
-          <img src="./assets/images/profie-head-icon.png" alt="" />
+      </aside>
+
+      <!-- Dashboard -->
+      <section class="dashboard">
+        <div class="dashboard-header">
+          <img
+            src="./assets/images/banner.png"
+            alt="House Image"
+            class="banner-img"
+          />
         </div>
-      </header>
 
-      <div class="main-content">
-        <!-- Sidebar -->
-        <aside class="sidebar">
-          <ul>
-            <li>
-              <a href="#"
-                ><img
-                  src="./assets/images/dashboard-icon.png"
-                  alt=""
-                  class="nav-img"
-                />
-                <div class="nav-text">Dashboard</div></a
-              >
-            </li>
-            <li>
-              <a href="#"
-                ><img
-                  src="./assets/images/purchase-icon.png"
-                  alt=""
-                  class="nav-img"
-                />
-                <div class="nav-text">Purchase History</div></a
-              >
-            </li>
-            <li>
-              <a href="#"
-                ><img
-                  src="./assets/images/product-icon.png"
-                  alt=""
-                  class="nav-img"
-                />
-                <div class="nav-text">My Products</div></a
-              >
-            </li>
-            <li>
-              <a href="#"
-                ><img
-                  src="./assets/images/profile-icon.png"
-                  alt=""
-                  class="nav-img"
-                />
-                <div class="nav-text">My Profile</div></a
-              >
-            </li>
-            <li>
-              <a href="#"
-                ><img
-                  src="./assets/images/cart-icon.png"
-                  alt=""
-                  class="nav-img"
-                />
-                <div class="nav-text">Cart</div></a
-              >
-            </li>
-            <li>
-              <a href="#"
-                ><img
-                  src="./assets/images/wish-icon.png"
-                  alt=""
-                  class="nav-img"
-                />
-                <div class="nav-text">Wishlist</div></a
-              >
-            </li>
-            <li>
-              <a href="#"
-                ><img
-                  src="./assets/images/pass-icon.png"
-                  alt=""
-                  class="nav-img"
-                />
-                <div class="nav-text">Change Password</div></a
-              >
-            </li>
-            <li>
-              <a href="#"
-                ><img
-                  src="./assets/images/logout-icon.png"
-                  alt=""
-                  class="nav-img"
-                />
-                <div class="nav-text">Logout</div></a
-              >
-            </li>
-          </ul>
-        </aside>
-
-        <!-- Dashboard -->
-        <section class="dashboard">
-          <div class="dashboard-header">
-            <img
-              src="./assets/images/banner.png"
-              alt="House Image"
-              class="banner-img"
-            />
-          </div>
-
-          <div class="dash-bottom">
-            <div class="dash-left">
-              <div class="dashboard-stats">
-                <div class="card">
-                  <img src="./assets/images/profile-card.png" alt="" />
-                  <h3>My Profile</h3>
-                </div>
-                <div class="card">
-                  <img src="./assets/images/property-card.png" alt="" />
-                  <h3>My Products</h3>
-                </div>
-                <div class="card">
-                  <img src="./assets/images/notifi-card.png" alt="" />
-                  <h3>Notifications</h3>
-                </div>
+        <div class="dash-bottom">
+          <div class="dash-left">
+            <div class="dashboard-stats">
+              <div class="card">
+                <img src="./assets/images/profile-card.png" alt="" />
+                <h3>My Profile</h3>
               </div>
-
-              <div class="payment-report">
-                <div class="content-head">
-                  <h2>Payment Report</h2>
-                  <button class="view-button">View</button>
-                </div>
-                <table>
-                  <thead>
-                    <tr>
-                      <th class="file">File Code</th>
-                      <th>Installment Due Date</th>
-                      <th>Installment Amount</th>
-                      <th>Paid Date</th>
-                      <th>Paid Amount</th>
-                      <th>Status</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>WR-RUND-5M-0002</td>
-                      <td>2024-1-10</td>
-                      <td>Rs. 17,500</td>
-                      <td>2024-1-18</td>
-                      <td>Rs. 17,000</td>
-                      <td class="status">
-                        <span class="paid">Paid</span>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>WR-RUND-5M-0002</td>
-                      <td>2024-2-10</td>
-                      <td>Rs. 17,500</td>
-                      <td>2024-2-01</td>
-                      <td>Rs. 17,500</td>
-                      <td class="status">
-                        <span class="rejected">Rejected</span>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>WR-RUND-5M-0002</td>
-                      <td>2024-3-10</td>
-                      <td>Rs. 17,500</td>
-                      <td>2024-3-14</td>
-                      <td>Rs. 18,000</td>
-                      <td class="status">
-                        <span class="paid">Paid</span>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>WR-RUND-5M-0006</td>
-                      <td>2024-1-10</td>
-                      <td>Rs. 17,500</td>
-                      <td>2024-3-16</td>
-                      <td>Rs. 17,500</td>
-                      <td class="status">
-                        <span class="paid">Paid</span>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>WR-RUND-5M-0006</td>
-                      <td>2024-2-10</td>
-                      <td>Rs. 17,500</td>
-                      <td>2024-3-11</td>
-                      <td>Rs. 17,500</td>
-                      <td class="status">
-                        <span class="pending">Pending</span>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>WR-RUND-5M-0006</td>
-                      <td>2024-3-10</td>
-                      <td>Rs. 17,500</td>
-                      <td>2024-3-05</td>
-                      <td>Rs. 17,500</td>
-                      <td class="status">
-                        <span class="paid">Paid</span>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+              <div class="card">
+                <img src="./assets/images/property-card.png" alt="" />
+                <h3>My Products</h3>
+              </div>
+              <div class="card">
+                <img src="./assets/images/notifi-card.png" alt="" />
+                <h3>Notifications</h3>
               </div>
             </div>
-            <div class="dash-right">
-              <div class="analytics-container">
-                <h2>Payment Analytics</h2>
-                <div class="chart-container">
-                  <canvas
-                    id="paymentChart"
-                    width="150px"
-                    height="150px"
-                  ></canvas>
-                  <div class="legend">
-                    <div>
-                      <span class="legend-dot blue"></span> 100% Total Amount
-                      <span class="amount">Rs. 1,800,000</span>
-                    </div>
-                    <div>
-                      <span class="legend-dot green"></span> 60% Total Paid
-                      Amount
-                      <span class="amount">Rs. 491,250</span>
-                    </div>
-                    <div>
-                      <span class="legend-dot orange"></span> 20% Pending
-                      Approvals <span class="amount">Rs. 360,000</span>
-                    </div>
-                    <div>
-                      <span class="legend-dot red"></span> 20% Total Remaining
-                      <span class="amount">Rs. 1,308,750</span>
-                    </div>
+
+            <div class="payment-report">
+              <div class="content-head">
+                <h2>Payment Report</h2>
+                <button class="view-button">View</button>
+              </div>
+              <table>
+                <thead>
+                  <tr>
+                    <th class="file">File Code</th>
+                    <th>Installment Due Date</th>
+                    <th>Installment Amount</th>
+                    <th>Paid Date</th>
+                    <th>Paid Amount</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>WR-RUND-5M-0002</td>
+                    <td>2024-1-10</td>
+                    <td>Rs. 17,500</td>
+                    <td>2024-1-18</td>
+                    <td>Rs. 17,000</td>
+                    <td class="status">
+                      <a class="paid" href="#">Paid</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>WR-RUND-5M-0002</td>
+                    <td>2024-2-10</td>
+                    <td>Rs. 17,500</td>
+                    <td>2024-2-01</td>
+                    <td>Rs. 17,500</td>
+                    <td class="status">
+                      <a class="rejected" href="#">Rejected</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>WR-RUND-5M-0002</td>
+                    <td>2024-3-10</td>
+                    <td>Rs. 17,500</td>
+                    <td>2024-3-14</td>
+                    <td>Rs. 18,000</td>
+                    <td class="status">
+                      <a class="paid" href="#">Paid</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>WR-RUND-5M-0006</td>
+                    <td>2024-1-10</td>
+                    <td>Rs. 17,500</td>
+                    <td>2024-3-16</td>
+                    <td>Rs. 17,500</td>
+                    <td class="status">
+                      <a class="paid" href="#">Paid</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>WR-RUND-5M-0006</td>
+                    <td>2024-2-10</td>
+                    <td>Rs. 17,500</td>
+                    <td>2024-3-11</td>
+                    <td>Rs. 17,500</td>
+                    <td class="status">
+                      <a class="pending" href="#">Pending</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>WR-RUND-5M-0006</td>
+                    <td>2024-3-10</td>
+                    <td>Rs. 17,500</td>
+                    <td>2024-3-05</td>
+                    <td>Rs. 17,500</td>
+                    <td class="status">
+                      <a class="paid" href="#">Paid</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="dash-right">
+            <div class="analytics-container">
+              <h2>Payment Analytics</h2>
+              <div class="chart-container">
+                <canvas id="paymentChart" width="150px" height="150px"></canvas>
+                <div class="legend">
+                  <div>
+                    <span class="legend-dot blue"></span> 100% Total Amount
+                    <span class="amount">Rs. 1,800,000</span>
+                  </div>
+                  <div>
+                    <span class="legend-dot green"></span> 60% Total Paid Amount
+                    <span class="amount">Rs. 491,250</span>
+                  </div>
+                  <div>
+                    <span class="legend-dot orange"></span> 20% Pending
+                    Approvals <span class="amount">Rs. 360,000</span>
+                  </div>
+                  <div>
+                    <span class="legend-dot red"></span> 20% Total Remaining
+                    <span class="amount">Rs. 1,308,750</span>
                   </div>
                 </div>
               </div>
-              <div class="target-container">
-                <div class="chart-head">
-                  <h2>Payment Target Actual Vs Paid</h2>
-                  <button class="dropbtn">October, 2023</button>
+            </div>
+            <div class="target-container">
+              <div class="chart-head">
+                <h2>Payment Target Actual Vs Paid</h2>
+                <!-- <select class="dropbtn">
+                  <option value="2024">2024</option>
+                  <option value="2023">2023</option>
+                  <option value="2022">2022</option>
+                  <option value="2021">2021</option>
+                </select> -->
+
+                <div class="dropdown">
+                  <button class="dropbtn">Select a Year</button>
+                  <div class="dropdown-content">
+                    <a href="#">2024</a>
+                    <a href="#">2023</a>
+                    <a href="#">2022</a>
+                  </div>
                 </div>
-                <div class="chart-container">
-                  <canvas id="barChart" width="200px" height="200px"></canvas>
-                </div>
+              </div>
+              <div class="chart-container">
+                <canvas id="barChart" width="200px" height="200px"></canvas>
               </div>
             </div>
           </div>
-        </section>
-      </div>
-
-      <!-- Footer -->
-      <footer class="footer">
-        <p>Copyright © 2024 All Rights Reserved @ Earthcon</p>
-        <div class="social-icons">
-          <a href="#"><img src="./assets/images/twitter.png" alt="" /></a>
-          <a href="#"><img src="./assets/images/fb.png" alt="" /></a>
-          <a href="#"><img src="./assets/images/yt.png" alt="" /></a>
-          <a href="#"><img src="./assets/images/linkedin.png" alt="" /></a>
-          <a href="#"><img src="./assets/images/ig.png" alt="" /></a>
         </div>
-        <p>Privacy Policy | Terms & Condition</p>
-      </footer>
-    </main>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>Copyright © 2024 All Rights Reserved @ Earthcon</p>
+      <div class="social-icons">
+        <a href="#"><img src="./assets/images/twitter.png" alt="" /></a>
+        <a href="#"><img src="./assets/images/fb.png" alt="" /></a>
+        <a href="#"><img src="./assets/images/yt.png" alt="" /></a>
+        <a href="#"><img src="./assets/images/linkedin.png" alt="" /></a>
+        <a href="#"><img src="./assets/images/ig.png" alt="" /></a>
+      </div>
+      <p>Privacy Policy | Terms & Condition</p>
+    </footer>
   </body>
 
   <script>
