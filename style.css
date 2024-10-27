@@ -19,9 +19,24 @@
   background: #111111;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
-  gap: 20px;
+  /* gap: 20px; */
+  padding: 0 20px 0 20px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  
+
+}
+.hamburger {
+  width: 40px;
+  cursor: pointer;
+  display: none;
+}
+.hamburger img {
+  width: 100%;
+  height: 100%;
 }
 
 .header ul {
@@ -32,6 +47,23 @@
 
 .header ul li {
   margin-right: 20px;
+  position: relative;
+  padding: 0.2rem;
+}
+.header ul li::after {
+  position: absolute;
+  content: '';
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: orange;
+  transform: scale(0);
+  transition: 0.3s ease;
+  transform-origin: bottom left;
+}
+.header ul li:hover::after {
+  transform: scale(1);
 }
 
 .header ul li a {
@@ -42,7 +74,8 @@
 .user-icon {
   background: #d9d9d9;
   padding: 4px 10px;
-  border-radius: 4px;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 .main-content {
@@ -57,10 +90,15 @@
 /* Sidebar */
 .sidebar {
   width: 300px;
-  height: auto;
+  height: 920px;
   left: 0;
   top: 0;
   color: #fff;
+  border: 2px solid black;
+  background: black;
+  margin: 10px;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .sidebar ul {
@@ -68,11 +106,13 @@
   padding: 0px;
   margin-top: 0px;
   width: 100%;
+  
 }
 
 .sidebar ul li a {
   height: 74px;
-  background: #f8f7fd;
+  /* background: #f8f7fd; */
+  /* background: black; */
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -81,15 +121,18 @@
   padding-left: 20px;
   text-decoration: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.24);
-  color: #6a6a6a;
+  color: white;
+  border-radius: 10px;
+  margin: 5px;
   transition: all 0.3s ease-in-out;
+  letter-spacing: 1px;
 }
 
 .sidebar ul li a:hover {
-  background: #e6e4f1;
+  background: #6A6A6A;
   color: black;
   font-weight: 600;
-  text-decoration: underline;
+  /* text-decoration: underline; */
 }
 
 .sidebar .nav-text {
@@ -103,10 +146,17 @@
   width: 100%;
   background-color: #fff;
 }
-
-.dashboard-header .banner-img {
+.dashboard-header {
+  /* border: 2px solid black; */
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 10px;
   width: 100%;
   height: 300px;
+}
+.dashboard-header .banner-img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -115,7 +165,8 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-items: start;
+  /* border: 2px solid black; */
 }
 
 .dash-bottom .dash-left {
@@ -126,62 +177,80 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  /* border: 2px solid black; */
 }
 
 .dash-bottom .dash-right {
   width: 40%;
   height: 100%;
   padding: 10px;
+  /* border: 2px solid black; */
 }
 
 /* Dashboard Cards */
 .dashboard-stats {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   margin: auto;
   width: 100%;
   gap: 20px;
 }
 
 .dashboard-stats .card {
+  position: relative;
   width: 201.78px;
-  height: 141.24px;
-  background: #f3f1fe;
+  height: 170.24px;
+  background: #ffffff;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-radius: 10px;
   gap: 8px;
   transition: all 0.3s ease-in-out;
+  overflow: hidden;
 }
 
 .dashboard-stats .card:hover {
-  background: #e6e4f1;
+  box-shadow: none;
   cursor: pointer;
   scale: 1.1;
 }
 
 .dashboard-stats .card h3 {
-  font-weight: 600;
+  font-weight: 400;
   font-size: 17px;
   line-height: 21px;
   text-align: center;
   color: #424242;
+  position: absolute;
+  bottom: -20px;
+  transition: all 0.2s ease;
+}
+.dashboard-stats .card:hover h3 {
+  bottom: 20px;
+  transition: all 0.2s ease;
 }
 
 .payment-report {
-  padding: 6px;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   width: 100%;
-  background-color: rgba(148, 148, 148, 0.671);
+  /* background-color: rgba(148, 148, 148, 0.671); */
   height: auto;
+  /* border: 2px solid black; */
+  overflow: hidden;
+  background: #ffffff;
+  
 }
 
 .content-head {
   height: auto;
-  padding: 20px;
-  background: #f8f7fd;
+  padding: 20px 5px 20px 20px;
+  background: white;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -197,21 +266,22 @@
 table {
   width: 100%;
   border-collapse: collapse;
+
 }
 
 thead,
 tbody {
   height: auto;
   padding: 20px;
-  background: #f8f7fd;
+  background: white;
 }
 
 thead th {
-  font-weight: 600;
+  font-weight: 400;
   font-size: 13px;
   line-height: 15px;
   text-align: center;
-  color: #6a6a6a;
+  color: black;
   width: 180px;
   padding: 4px 8px;
 }
@@ -239,7 +309,7 @@ tbody td {
   font-size: 12px;
   line-height: 15px;
   text-align: center;
-  color: #111111;
+  color:#6a6a6a;
   width: auto;
 }
 
@@ -309,7 +379,8 @@ tbody tr:last-child td {
   background-color: #ff8400;
   border: none;
   cursor: pointer;
-  width: max-content;
+  /* width: max-content; */
+  width: 85px;
   padding: 6px 20px;
   border-radius: 6px;
   color: white;
@@ -328,7 +399,9 @@ tbody tr:last-child td {
   padding: 20px;
   width: auto;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-  margin: 20px 0;
+  margin: 0  0 20px 0 ;
+  /* margin: 20px 0; */
+  /* border: 2px solid black; */
 }
 
 h2 {
@@ -344,6 +417,7 @@ h2 {
   align-items: center;
   padding: 20px 10px;
   width: 100%;
+  height: 100%;
 }
 
 .analytics-container canvas {
@@ -521,8 +595,8 @@ h2 {
 
 @media (min-width: 1800px) {
   .analytics-container canvas {
-    height: 200px !important;
-    width: 200px !important;
+    height: 180px !important;
+    width: 180px !important;
   }
 
   .chart-container {
@@ -530,7 +604,7 @@ h2 {
   }
 
   .payment-report {
-    width: 95%;
+    width: 100%;
   }
 
   tbody td {
@@ -553,7 +627,7 @@ h2 {
 
   .view-button {
     font-size: 18px;
-    padding: 14px 0px;
+    padding: 12px 0px;
     width: 110px;
   }
 
@@ -566,17 +640,17 @@ h2 {
 
   .dashboard-stats .card {
     width: 250px;
-    height: 200px;
+    height: 150px;
     gap: 20px;
   }
 
   .dashboard-stats .card h3 {
-    font-size: 24px;
+    font-size: 17px;
   }
 
   .analytics-container,
   .target-container {
-    height: 300px;
+    height: 350px;
   }
 
   .target-container h2 {
@@ -585,6 +659,7 @@ h2 {
 
   .dropbtn {
     font-size: 18px;
+    padding: 10px 16px;
   }
 
   .dropdown-content a {
@@ -592,6 +667,68 @@ h2 {
   }
 
   .legend div {
-    font-size: 18px;
+    font-size: 17px;
   }
+  .sidebar {
+    height: 100dvh;
+  }
+}
+@media (max-width:1334px) {
+
+  .sidebar {
+    position: absolute;
+    z-index: 888;
+    left: -400px;
+    top: 70px;
+    transition: 0.4s ease;
+  }
+  .hamburger {
+    display: block;
+    transition: 0.4s ease;
+  }
+ 
+}
+@media (max-width:1436px) {
+  .analytics-container canvas {
+    height: 120px !important;
+    width: 120px !important;
+  }
+  .legend div {
+    font-size: 12px;
+  }
+  .legend-dot {
+    height: 10px;
+    width: 10px;
+    
+  }
+  .chart-container {
+    padding: 20px 15px;
+  }
+}
+@media (max-width:1088px) {
+
+
+  .analytics-container canvas {
+    height: 100px !important;
+    width: 100px !important;
+  }
+  .chart-container {
+    padding: 20px 5px;
+  }
+  .legend-dot {
+    height: 8px;
+    width: 8px;
+    
+  }
+  .legend div {
+    font-size: 10px;
+  }
+}
+@media (max-width:1095px) {
+  .dropbtn {
+   font-size: 12px;
+   padding: 8px 10px;
+  }
+
+  
 }
