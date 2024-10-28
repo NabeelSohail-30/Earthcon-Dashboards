@@ -26,8 +26,6 @@
   position: sticky;
   top: 0;
   z-index: 999;
-  
-
 }
 .hamburger {
   width: 40px;
@@ -52,7 +50,7 @@
 }
 .header ul li::after {
   position: absolute;
-  content: '';
+  content: "";
   bottom: 0;
   left: 0;
   width: 100%;
@@ -106,7 +104,6 @@
   padding: 0px;
   margin-top: 0px;
   width: 100%;
-  
 }
 
 .sidebar ul li a {
@@ -129,7 +126,7 @@
 }
 
 .sidebar ul li a:hover {
-  background: #6A6A6A;
+  background: #6a6a6a;
   color: black;
   font-weight: 600;
   /* text-decoration: underline; */
@@ -213,7 +210,7 @@
 }
 
 .dashboard-stats .card:hover {
-  box-shadow: none;
+  /* box-shadow: none; */
   cursor: pointer;
   scale: 1.1;
 }
@@ -244,7 +241,6 @@
   /* border: 2px solid black; */
   overflow: hidden;
   background: #ffffff;
-  
 }
 
 .content-head {
@@ -266,7 +262,6 @@
 table {
   width: 100%;
   border-collapse: collapse;
-
 }
 
 thead,
@@ -309,7 +304,7 @@ tbody td {
   font-size: 12px;
   line-height: 15px;
   text-align: center;
-  color:#6a6a6a;
+  color: #6a6a6a;
   width: auto;
 }
 
@@ -399,7 +394,7 @@ tbody tr:last-child td {
   padding: 20px;
   width: auto;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-  margin: 0  0 20px 0 ;
+  margin: 0 0 20px 0;
   /* margin: 20px 0; */
   /* border: 2px solid black; */
 }
@@ -673,8 +668,7 @@ h2 {
     height: 100dvh;
   }
 }
-@media (max-width:1334px) {
-
+@media (max-width: 1334px) {
   .sidebar {
     position: absolute;
     z-index: 888;
@@ -686,9 +680,8 @@ h2 {
     display: block;
     transition: 0.4s ease;
   }
- 
 }
-@media (max-width:1436px) {
+@media (max-width: 1436px) {
   .analytics-container canvas {
     height: 120px !important;
     width: 120px !important;
@@ -699,15 +692,12 @@ h2 {
   .legend-dot {
     height: 10px;
     width: 10px;
-    
   }
   .chart-container {
     padding: 20px 15px;
   }
 }
-@media (max-width:1088px) {
-
-
+@media (max-width: 1088px) {
   .analytics-container canvas {
     height: 100px !important;
     width: 100px !important;
@@ -718,17 +708,14 @@ h2 {
   .legend-dot {
     height: 8px;
     width: 8px;
-    
   }
   .legend div {
     font-size: 10px;
   }
 }
-@media (max-width:1095px) {
+@media (max-width: 1095px) {
   .dropbtn {
-   font-size: 12px;
-   padding: 8px 10px;
+    font-size: 12px;
+    padding: 8px 10px;
   }
-
-  
 }
