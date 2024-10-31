@@ -9,8 +9,13 @@
   </head>
   <body>
     <header class="header">
-      <div class="hamburger">
-        <img src="./assets/images/menu.png" alt="">
+      <div class="nav-left">
+        <div class="hamburger">
+          <img src="./assets/images/menu.png" alt="" />
+        </div>
+        <div class="logo">
+          <img src="./assets/images/dashboard-icon.png" alt="" />
+        </div>
       </div>
       <ul>
         <li><a href="#">Home</a></li>
@@ -27,8 +32,8 @@
       <aside class="sidebar">
         <ul>
           <li>
-            <a href="#"
-              ><img
+            <a href="#">
+              <img
                 src="./assets/images/dashboard-icon.png"
                 alt=""
                 class="nav-img"
@@ -409,24 +414,21 @@
       },
     });
 
-
-    const hamburger = document.querySelector('.hamburger')
-    const sidebar = document.querySelector('.sidebar')
+    const hamburger = document.querySelector(".hamburger");
+    const sidebar = document.querySelector(".sidebar");
 
     let show = false;
 
-    if(hamburger){
-      hamburger.addEventListener("click", ()=>{
-       if(show ==false){
-
-          sidebar.style.left = '0px'
-          show = true
+    if (hamburger) {
+      hamburger.addEventListener("click", () => {
+        if (show == false) {
+          sidebar.style.left = "0px";
+          show = true;
+        } else if (show == true) {
+          sidebar.style.left = "-400px";
+          show = false;
         }
-        else if(show == true) {
-          sidebar.style.left = '-400px'
-          show = false
-        }
-      })
+      });
     }
   </script>
 </html>
