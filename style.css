@@ -19,6 +19,11 @@
   gap: 20px;
 }
 
+.header .logo img {
+  width: 36px;
+  height: 36px;
+}
+
 .header {
   width: 100%;
   height: 71px;
@@ -145,6 +150,77 @@
   font-weight: 500;
   line-height: 24px;
   text-align: left;
+}
+
+.nav-icon {
+  width: 28px;
+  height: 28px;
+  background-size: cover;
+  transition: background-image 0.3s ease;
+}
+
+.nav-dashboard .nav-icon {
+  background-image: url("./assets/images/dashboard-icon.png");
+}
+
+.nav-dashboard:hover .nav-icon {
+  background-image: url("./assets/images/dashboard-icon-hover.png");
+}
+
+.nav-purchase .nav-icon {
+  background-image: url("./assets/images/purchase-icon.png");
+}
+
+.nav-purchase:hover .nav-icon {
+  background-image: url("./assets/images/purchase-icon-hover.png");
+}
+
+.nav-product .nav-icon {
+  background-image: url("./assets/images/product-icon.png");
+}
+
+.nav-product:hover .nav-icon {
+  background-image: url("./assets/images/product-icon-hover.png");
+}
+
+.nav-profile .nav-icon {
+  background-image: url("./assets/images/profile-icon.png");
+}
+
+.nav-profile:hover .nav-icon {
+  background-image: url("./assets/images/profile-icon-hover.png");
+}
+
+.nav-logout .nav-icon {
+  background-image: url("./assets/images/logout-icon.png");
+}
+
+.nav-logout:hover .nav-icon {
+  background-image: url("./assets/images/logout-icon-hover.png");
+}
+
+.nav-cart .nav-icon {
+  background-image: url("./assets/images/cart-icon.png");
+}
+
+.nav-cart:hover .nav-icon {
+  background-image: url("./assets/images/cart-icon-hover.png");
+}
+
+.nav-wish .nav-icon {
+  background-image: url("./assets/images/wish-icon.png");
+}
+
+.nav-wish:hover .nav-icon {
+  background-image: url("./assets/images/wish-icon-hover.png");
+}
+
+.nav-pass .nav-icon {
+  background-image: url("./assets/images/pass-icon.png");
+}
+
+.nav-pass:hover .nav-icon {
+  background-image: url("./assets/images/pass-icon-hover.png");
 }
 
 .dashboard {
@@ -314,6 +390,10 @@ tbody td {
   text-align: center;
   color: #6a6a6a;
   width: auto;
+}
+
+tbody tr:hover {
+  background: #f8f7fd;
 }
 
 tbody tr:last-child td {
