@@ -17,13 +17,16 @@
           <img src="./assets/images/dashboard-icon.png" alt="" />
         </div>
       </div>
-      <ul>
+      <ul class="drop-menu-container">
         <li><a href="#">Home</a></li>
         <li><a href="#">Projects</a></li>
         <li><a href="#">Content</a></li>
       </ul>
       <div class="user-icon">
         <img src="./assets/images/profile-head-icon.png" alt="" />
+      </div>
+      <div class="drop-menu">
+        <img src="./assets/images/arrow-down.png" alt="">
       </div>
     </header>
 
@@ -127,67 +130,68 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td>WR-RUND-5M-0002</td>
-                    <td>2024-1-10</td>
-                    <td>Rs. 17,500</td>
-                    <td>2024-1-18</td>
-                    <td>Rs. 17,000</td>
-                    <td class="status">
+                    <td data-label="File Code">WR-RUND-5M-0002</td>
+                    <td data-label="Installment Due Date">2024-1-10</td>
+                    <td data-label="Installment Amount">Rs. 17,500</td>
+                    <td data-label="Paid Date">2024-1-18</td>
+                    <td data-label="Paid Amount">Rs. 17,000</td>
+                    <td class="status" data-label="Status">
                       <a class="paid" href="#">Paid</a>
                     </td>
                   </tr>
                   <tr>
-                    <td>WR-RUND-5M-0002</td>
-                    <td>2024-2-10</td>
-                    <td>Rs. 17,500</td>
-                    <td>2024-2-01</td>
-                    <td>Rs. 17,500</td>
-                    <td class="status">
+                    <td data-label="File Code">WR-RUND-5M-0002</td>
+                    <td data-label="Installment Due Date">2024-2-10</td>
+                    <td data-label="Installment Amount">Rs. 17,500</td>
+                    <td data-label="Paid Date">2024-2-01</td>
+                    <td data-label="Paid Amount">Rs. 17,500</td>
+                    <td class="status" data-label="Status">
                       <a class="rejected" href="#">Rejected</a>
                     </td>
                   </tr>
                   <tr>
-                    <td>WR-RUND-5M-0002</td>
-                    <td>2024-3-10</td>
-                    <td>Rs. 17,500</td>
-                    <td>2024-3-14</td>
-                    <td>Rs. 18,000</td>
-                    <td class="status">
+                    <td data-label="File Code">WR-RUND-5M-0002</td>
+                    <td data-label="Installment Due Date">2024-3-10</td>
+                    <td data-label="Installment Amount">Rs. 17,500</td>
+                    <td data-label="Paid Date">2024-3-14</td>
+                    <td data-label="Paid Amount">Rs. 18,000</td>
+                    <td class="status" data-label="Status">
                       <a class="paid" href="#">Paid</a>
                     </td>
                   </tr>
                   <tr>
-                    <td>WR-RUND-5M-0006</td>
-                    <td>2024-1-10</td>
-                    <td>Rs. 17,500</td>
-                    <td>2024-3-16</td>
-                    <td>Rs. 17,500</td>
-                    <td class="status">
+                    <td data-label="File Code">WR-RUND-5M-0006</td>
+                    <td data-label="Installment Due Date">2024-1-10</td>
+                    <td data-label="Installment Amount">Rs. 17,500</td>
+                    <td data-label="Paid Date">2024-3-16</td>
+                    <td data-label="Paid Amount">Rs. 17,500</td>
+                    <td class="status" data-label="Status">
                       <a class="paid" href="#">Paid</a>
                     </td>
                   </tr>
                   <tr>
-                    <td>WR-RUND-5M-0006</td>
-                    <td>2024-2-10</td>
-                    <td>Rs. 17,500</td>
-                    <td>2024-3-11</td>
-                    <td>Rs. 17,500</td>
-                    <td class="status">
+                    <td data-label="File Code">WR-RUND-5M-0006</td>
+                    <td data-label="Installment Due Date">2024-2-10</td>
+                    <td data-label="Installment Amount">Rs. 17,500</td>
+                    <td data-label="Paid Date">2024-3-11</td>
+                    <td data-label="Paid Amount">Rs. 17,500</td>
+                    <td class="status" data-label="Status">
                       <a class="pending" href="#">Pending</a>
                     </td>
                   </tr>
                   <tr>
-                    <td>WR-RUND-5M-0006</td>
-                    <td>2024-3-10</td>
-                    <td>Rs. 17,500</td>
-                    <td>2024-3-05</td>
-                    <td>Rs. 17,500</td>
-                    <td class="status">
+                    <td data-label="File Code">WR-RUND-5M-0006</td>
+                    <td data-label="Installment Due Date">2024-3-10</td>
+                    <td data-label="Installment Amount">Rs. 17,500</td>
+                    <td data-label="Paid Date">2024-3-05</td>
+                    <td data-label="Paid Amount">Rs. 17,500</td>
+                    <td class="status" data-label="Status">
                       <a class="paid" href="#">Paid</a>
                     </td>
                   </tr>
                 </tbody>
               </table>
+              
             </div>
           </div>
           <div class="dash-right">
@@ -384,8 +388,13 @@
 
     const hamburger = document.querySelector(".hamburger");
     const sidebar = document.querySelector(".sidebar");
+    const drop_Btn = document.querySelector(".drop-menu")
+    const drop_Menu = document.querySelector(".drop-menu-container")
 
     let show = false;
+    let showdrop_Menu = false;
+
+    
 
     if (hamburger) {
       hamburger.addEventListener("click", () => {
@@ -396,7 +405,22 @@
           sidebar.style.left = "-400px";
           show = false;
         }
+        console.log(show , "------")
       });
+    }
+    if(drop_Btn) {
+      drop_Btn.addEventListener("click", ()=>{
+        console.log('working')
+        if(showdrop_Menu == false){
+          drop_Menu.style.right = '0px'
+          showdrop_Menu = true;
+        }
+        else if (showdrop_Menu == true){
+          drop_Menu.style.right = '-300px';
+          showdrop_Menu = false;
+        }
+        console.log(showdrop_Menu, "=======")
+      })
     }
   </script>
 </html>
