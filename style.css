@@ -54,7 +54,6 @@
   list-style: none;
   display: flex;
   gap: 30px;
-  
 }
 
 .header ul li {
@@ -93,7 +92,7 @@
   cursor: pointer;
   margin-right: 30px;
 }
-.drop-menu{
+.drop-menu {
   display: none;
   position: absolute;
   right: 15px;
@@ -360,7 +359,6 @@ table {
   width: 100%;
   border-collapse: collapse;
   table-layout: auto;
- 
 }
 
 thead,
@@ -660,7 +658,6 @@ h2 {
   padding: 10px 80px;
 }
 
-
 .footer .social-icons {
   display: flex;
   gap: 30px;
@@ -818,7 +815,6 @@ h2 {
   }
   .footer .social-icons a {
     width: 15px;
-  
   }
   .footer p {
     font-size: 12px;
@@ -861,8 +857,7 @@ h2 {
   
 } */
 
-@media (max-width:959px) {
-
+@media (max-width: 959px) {
   .dash-bottom {
     flex-direction: column;
   }
@@ -877,44 +872,43 @@ h2 {
     gap: 20px;
   }
   .analytics-container,
-.target-container{
-  width: 50%;
+  .target-container {
+    width: 50%;
 
-  height:300px;
-}
-h2 {
-  font-weight: 800;
-  font-size: 15px;
-  line-height: 20px;
-  color: #282828;
-}
-.analytics-container canvas {
-  height: 120px !important;
-  width: 120px !important;
-}
-.legend div {
-  font-size: 12px;
-}
-.legend-dot {
-  height: 10px;
-  width: 10px;
-}
-.chart-container {
-  padding: 20px 15px;
+    height: 300px;
+  }
+  h2 {
+    font-weight: 800;
+    font-size: 15px;
+    line-height: 20px;
+    color: #282828;
+  }
+  .analytics-container canvas {
+    height: 120px !important;
+    width: 120px !important;
+  }
+  .legend div {
+    font-size: 12px;
+  }
+  .legend-dot {
+    height: 10px;
+    width: 10px;
+  }
+  .chart-container {
+    padding: 20px 15px;
+  }
 }
 
-}
-
-@media (max-width:870px) {
+@media (max-width: 870px) {
   .analytics-container canvas {
     height: 100px !important;
     width: 100px !important;
   }
   .analytics-container,
-  .target-container{
+  .target-container {
     width: 50%;
-    
-    height:250px;
+
+    height: 250px;
   }
   .legend div {
     font-size: 10px;
@@ -929,11 +923,9 @@ h2 {
     line-height: 18px;
     color: #282828;
   }
-  
 }
 
-@media (max-width:769px) {
-
+@media (max-width: 769px) {
   .analytics-container canvas {
     height: 130px !important;
     width: 130px !important;
@@ -942,10 +934,10 @@ h2 {
     flex-direction: column;
   }
   .analytics-container,
-  .target-container{
+  .target-container {
     width: 100%;
-    
-    height:250px;
+
+    height: 250px;
   }
   .legend div {
     font-size: 14px;
@@ -954,11 +946,11 @@ h2 {
     height: 10px;
     width: 10px;
   }
-  h2{
+  h2 {
     font-size: 15px;
   }
   .chart-container {
-    justify-content: start;
+    justify-content: center;
     gap: 20px;
   }
   table {
@@ -971,24 +963,47 @@ h2 {
     justify-content: center;
     height: auto;
     gap: 30px;
-    padding: 20px 0px ;
+    padding: 20px 0px;
   }
 }
-@media (max-width:493px) {
+@media (max-width: 493px) {
   .analytics-container canvas {
-    height: 90px !important;
-    width: 90px !important;
+    height: 100px !important;
+    width: 100px !important;
   }
-  .legend div {
-    font-size: 11px;
-  }
-  .legend-dot {
-    height: 8px;
-    width: 8px;
-  }
-  .analytics-container{
+
+  .chart-container {
+    justify-content: center;
+    gap: 10px;
     width: 100%;
-    height:200px;
+    border: 1px solid rebeccapurple;
+  }
+
+  canvas{
+    border: 1px solid red;
+  }
+
+  .legend{
+    border: 1px solid green;
+    width: 100%;
+  }
+
+  .amount {
+    margin-left: 3px;
+    font-weight: bold;
+  }
+
+  .legend div {
+    font-size: 8px;
+  }
+
+  .legend-dot {
+    height: 6px;
+    width: 6px;
+  }
+  .analytics-container {
+    width: 100%;
+    height: 200px;
   }
   .user-icon {
     width: 45px;
@@ -1003,13 +1018,11 @@ h2 {
   .dashboard-stats .card h3 {
     font-size: 12px;
   }
-  
-  
 }
-@media (max-width:660px) {
+@media (max-width: 660px) {
   .header ul {
     position: absolute;
-    border-radius: 0 0  0 10px;
+    border-radius: 0 0 0 10px;
     width: 150px;
     height: 230px;
     align-items: center;
@@ -1017,27 +1030,21 @@ h2 {
     top: 70px;
     right: -300px;
     flex-direction: column;
-    background-color: #111111;  
+    background-color: #111111;
     transition: 0.4s ease;
   }
   .header ul li {
     margin-right: 0;
   }
-  
+
   .drop-menu {
     display: block;
-
-    
   }
 }
-@media (max-width:400px) {
-
+@media (max-width: 400px) {
   .analytics-container canvas {
     height: 80px !important;
     width: 80px !important;
-  }
-  .legend div {
-    font-size: 8px;
   }
 }
 
@@ -1086,8 +1093,8 @@ h2 {
   }
 
   /* Adjust the status links */
-  /* .status {
+/* .status {
     text-align: center;
     margin-top: 10px;
   }
-} */ 
+} */
