@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="res.css" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
   <body>
@@ -26,7 +27,7 @@
         <img src="./assets/images/profile-head-icon.png" alt="" />
       </div>
       <div class="drop-menu">
-        <img src="./assets/images/arrow-down.png" alt="">
+        <img src="./assets/images/arrow-down.png" alt="" />
       </div>
     </header>
 
@@ -35,7 +36,7 @@
       <aside class="sidebar">
         <ul>
           <li class="nav-dashboard">
-            <a href="#">
+            <a href="index.html">
               <div class="nav-icon"></div>
               <div class="nav-text">Dashboard</div></a
             >
@@ -191,7 +192,6 @@
                   </tr>
                 </tbody>
               </table>
-              
             </div>
           </div>
           <div class="dash-right">
@@ -388,14 +388,14 @@
 
     const hamburger = document.querySelector(".hamburger");
     const sidebar = document.querySelector(".sidebar");
-    const drop_Btn = document.querySelector(".drop-menu")
-    const drop_Menu = document.querySelector(".drop-menu-container")
+    const drop_Btn = document.querySelector(".drop-menu");
+    const drop_Menu = document.querySelector(".drop-menu-container");
+    const sidebarLinks = document.querySelectorAll(".sidebar a"); // Assuming sidebar items are links
 
     let show = false;
     let showdrop_Menu = false;
 
-    
-
+    // Toggle sidebar function
     if (hamburger) {
       hamburger.addEventListener("click", () => {
         if (show == false) {
@@ -405,22 +405,52 @@
           sidebar.style.left = "-400px";
           show = false;
         }
-        console.log(show , "------")
+        console.log(show, "------");
       });
     }
-    if(drop_Btn) {
-      drop_Btn.addEventListener("click", ()=>{
-        console.log('working')
-        if(showdrop_Menu == false){
-          drop_Menu.style.right = '0px'
+
+    // Toggle dropdown menu function
+    if (drop_Btn) {
+      drop_Btn.addEventListener("click", () => {
+        console.log("working");
+        if (showdrop_Menu == false) {
+          drop_Menu.style.right = "0px";
           showdrop_Menu = true;
-        }
-        else if (showdrop_Menu == true){
-          drop_Menu.style.right = '-300px';
+        } else if (showdrop_Menu == true) {
+          drop_Menu.style.right = "-300px";
           showdrop_Menu = false;
         }
-        console.log(showdrop_Menu, "=======")
-      })
+        console.log(showdrop_Menu, "=======");
+      });
     }
+
+    // Close sidebar if clicking outside of it
+    document.addEventListener("click", (event) => {
+      if (
+        show &&
+        !sidebar.contains(event.target) &&
+        !hamburger.contains(event.target)
+      ) {
+        sidebar.style.left = "-400px";
+        show = false;
+        console.log("Sidebar closed due to outside click");
+      }
+    });
+
+    // Close sidebar when a sidebar item is clicked (for navigation)
+    sidebarLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        sidebar.style.left = "-400px";
+        show = false;
+        console.log("Sidebar closed due to navigation");
+      });
+    });
+
+    // Close sidebar on page load
+    window.addEventListener("load", () => {
+      sidebar.style.left = "-400px";
+      show = false;
+      console.log("Sidebar closed on page load");
+    });
   </script>
 </html>
